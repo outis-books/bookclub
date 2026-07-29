@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>발송 도우미 · 인간의 내밀한 역사</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.page { max-width: 720px; margin: 0 auto; padding: 56px 20px 90px; }
+.kicker { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #aaa; margin-bottom: 14px; }
+h1 { font-family: 'Noto Serif KR', serif; font-size: 30px; font-weight: 400; line-height: 1.35; margin-bottom: 10px; }
+.lede { font-size: 14.5px; color: #777; line-height: 1.85; margin-bottom: 12px; }
+.tip { background: #FDF8EF; border: 1px solid #F2E6CE; border-radius: 12px; padding: 16px 20px; margin: 22px 0 40px; }
+.tip p { font-size: 13.5px; color: #6b5330; line-height: 1.8; margin: 0; }
+.tip strong { color: #854F0B; }
+.card { border: 1px solid #eee; border-radius: 14px; padding: 22px 24px; margin: 12px 0; transition: border-color .15s; }
+.card.now { border-color: #C4553A; border-width: 2px; padding: 21px 23px; background: #FFFCFA; }
+.card.done { opacity: .5; }
+.row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.wk { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #fff; background: #C4553A; padding: 3px 10px; border-radius: 100px; }
+.card.done .wk { background: #bbb; }
+.when { font-family: 'DM Mono', monospace; font-size: 13px; color: #854F0B; font-weight: 500; }
+.card.done .when { color: #aaa; }
+.flag { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: .1em; color: #C4553A; border: 1px solid #F0C4B4; border-radius: 100px; padding: 2px 9px; }
+h2 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 400; margin: 6px 0 4px; }
+.ch { font-size: 13px; color: #888; line-height: 1.75; margin-bottom: 14px; }
+.url { font-family: 'DM Mono', monospace; font-size: 11.5px; color: #999; word-break: break-all; margin-bottom: 14px; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+button { font-family: 'Noto Sans KR', sans-serif; font-size: 13px; padding: 9px 18px; border-radius: 100px; border: 1px solid #F2E6CE; background: #FDF8EF; color: #854F0B; cursor: pointer; transition: background .15s; }
+button:hover { background: #F7EBD8; }
+button.main { background: #C4553A; border-color: #C4553A; color: #fff; }
+button.main:hover { background: #A8462F; }
+button.ok { background: #2C7A4B !important; border-color: #2C7A4B !important; color: #fff !important; }
+a.open { font-size: 13px; color: #854F0B; text-decoration: none; padding: 9px 4px; }
+.foot { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: .06em; margin-top: 48px; padding-top: 22px; border-top: 1px solid #f5f5f5; line-height: 1.9; }
+.foot a { color: #bbb; }
+@media (max-width: 600px) { h1 { font-size: 24px; } .page { padding: 40px 16px 70px; } .card { padding: 18px 18px; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="kicker">OUTIS BOOK SALON · 진행자용</div>
+  <h1>인간의 내밀한 역사<br>발송 도우미</h1>
+  <p class="lede">매주 금요일, 이번 주 카드에서 <strong>문구 복사</strong>를 누르고 단톡방에 붙여넣으면 끝입니다.</p>
+
+  <div class="tip">
+    <p><strong>이 주소를 즐겨찾기에 넣어 두세요.</strong> 매주 여기만 열면 됩니다. 오늘 날짜에 맞는 주차가 자동으로 표시됩니다.</p>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="foot">
+    <p>BOOK — 시어도어 젤딘 『인간의 내밀한 역사』 · 어크로스 · 전 25장</p>
+    <p>SCHEDULE — 독서 시작 2026.7.27(월) · 발송 매주 금요일 · 전 7주</p>
+    <p>ALL — <a href="intimate-history.html">전체 스물다섯 장 한 페이지</a></p>
+  </div>
+
+</div>
+<script>
+var WEEKS = [
+  { n:1, date:'2026-07-31', theme:'만남, 대화, 뿌리, 고독',
+    ch:'1장 새로운 만남은 잃어버렸던 희망을 소생시킨다 / 2장 남성과 여성 사이에 서서히 흥미로운 대화가 가능하게 된 경위 / 3장 사람들은 이제 더 깊고 먼 곳에서 자신의 뿌리를 찾기 시작했다 / 4장 일부 사람들이 고독에 대해 면역력을 갖게 된 경위',
+    msg:'[인간의 내밀한 역사] 1주차 안내입니다 🍊\n\n이번 주에 걸은 네 장 — 만남, 대화, 뿌리, 고독.\n\n1장 새로운 만남은 잃어버렸던 희망을 소생시킨다\n2장 남성과 여성 사이에 서서히 흥미로운 대화가 가능하게 된 경위\n3장 사람들은 이제 더 깊고 먼 곳에서 자신의 뿌리를 찾기 시작했다\n4장 일부 사람들이 고독에 대해 면역력을 갖게 된 경위\n\n장마다 한 줄 논지와 함께 나눌 질문 셋을 담았습니다.\n밑줄 그은 문장을 하나씩 옮겨 적어 오시면, 그것으로 모임을 엽니다.\n\n' },
+  { n:2, date:'2026-08-07', theme:'사랑, 축적, 욕망, 존경',
+    ch:'5장 새로운 형태의 사랑이 생겨난 경위 / 6장 섹스보다 조리법이 더 발달한 이유 / 7장 이성이나 동성에게 느끼는 남성의 욕망이 몇 세기에 걸쳐 변화해온 경위 / 8장 사람들이 권력보다 존경받기를 더 소망하게 된 경위',
+    msg:'[인간의 내밀한 역사] 2주차 안내입니다 🍊\n\n사랑, 축적, 욕망, 존경.\n\n5장 새로운 형태의 사랑이 생겨난 경위\n6장 섹스보다 조리법이 더 발달한 이유\n7장 이성이나 동성에게 느끼는 남성의 욕망이 몇 세기에 걸쳐 변화해온 경위\n8장 사람들이 권력보다 존경받기를 더 소망하게 된 경위\n\n6장은 이 책에서 가장 자주 이야기되는 장입니다.\n말하지 않은 것은 늘지 않는다 — 오늘 우리 이야기이기도 합니다.\n\n' },
+  { n:3, date:'2026-08-14', theme:'중재, 두려움, 호기심, 적',
+    ch:'9장 명령하거나 명령받기를 거부한 사람들은 중재자가 되었다 / 10장 공포에서 자유로워지기 위해 사람들은 새로운 공포를 찾아냈다 / 11장 호기심은 자유의 열쇠가 되었다 / 12장 적을 쳐부수기가 점점 더 어려워지는 이유',
+    msg:'[인간의 내밀한 역사] 3주차 안내입니다 🍊\n\n중재, 두려움, 호기심, 적.\n\n9장 명령하거나 명령받기를 거부한 사람들은 중재자가 되었다\n10장 공포에서 자유로워지기 위해 사람들은 새로운 공포를 찾아냈다\n11장 호기심은 자유의 열쇠가 되었다\n12장 적을 쳐부수기가 점점 더 어려워지는 이유\n\n호기심이 오랫동안 ‘죄’였다는 대목에서 한 번 멈추게 됩니다.\n\n' },
+  { n:4, date:'2026-08-21', theme:'도피, 연민, 관용, 우울',
+    ch:'13장 도피의 기술은 발전했지만 도피할 곳은 잘 모르는 이유 / 14장 척박한 땅에서도 연민이 꽃피는 이유 / 15장 관용만으로 불충분한 이유 / 16장 성 해방과 소비사회의 풍요에도 불구하고 삶이 우울한 이유',
+    msg:'[인간의 내밀한 역사] 4주차 안내입니다 🍊\n\n도피, 연민, 관용, 우울.\n\n13장 도피의 기술은 발전했지만 도피할 곳은 잘 모르는 이유\n14장 척박한 땅에서도 연민이 꽃피는 이유\n15장 관용만으로 불충분한 이유\n16장 성 해방과 소비사회의 풍요에도 불구하고 삶이 우울한 이유\n\n관용은 참아주는 것이고, 참아주는 것으로는 아무도 만나지 못한다 —\n이번 주는 그 문장 하나만 들고 가셔도 됩니다.\n\n' },
+  { n:5, date:'2026-08-28', theme:'여행, 우정, 운명, 시간',
+    ch:'17장 여행자는 세계에서 가장 큰 국가의 국민이 되었다 / 18장 남자와 여자 사이의 우정이 깨지기 쉬운 이유 / 19장 점성가조차 자신의 운명에 저항한다 / 20장 사람들에게 다양한 인생을 살아볼 시간이 없는 이유',
+    msg:'[인간의 내밀한 역사] 5주차 안내입니다 🍊\n\n여행, 우정, 운명, 시간.\n\n17장 여행자는 세계에서 가장 큰 국가의 국민이 되었다\n18장 남자와 여자 사이의 우정이 깨지기 쉬운 이유\n19장 점성가조차 자신의 운명에 저항한다\n20장 사람들에게 다양한 인생을 살아볼 시간이 없는 이유\n\n보러 간 것만 보고 돌아오는 여행과, 걸려 넘어지는 여행.\n후자만이 사람을 바꾼다고 합니다.\n\n' },
+  { n:6, date:'2026-09-04', theme:'부모와 자식, 가정, 선택, 친절',
+    ch:'21장 부모와 자식 사이에 서로에 대한 기대가 변해가는 이유 / 22장 가정의 위기는 너그러움의 진화를 위한 한 단계에 지나지 않는다 / 23장 사람들이 삶의 방식을 선택하는 방법과 거기에 완전히 만족하지 못하는 이유 / 24장 사람들이 서로 우호적으로 대하게 된 경위',
+    msg:'[인간의 내밀한 역사] 6주차 안내입니다 🍊\n\n부모와 자식, 가정, 선택, 친절.\n\n21장 부모와 자식 사이에 서로에 대한 기대가 변해가는 이유\n22장 가정의 위기는 너그러움의 진화를 위한 한 단계에 지나지 않는다\n23장 사람들이 삶의 방식을 선택하는 방법과 거기에 완전히 만족하지 못하는 이유\n24장 사람들이 서로 우호적으로 대하게 된 경위\n\n다음 주면 마지막입니다.\n\n' },
+  { n:7, date:'2026-09-11', theme:'마지막 장과 전체 마무리',
+    ch:'25장 영혼의 동료 사이에 가능한 일 / 마무리 모임 — 전체를 놓고',
+    msg:'[인간의 내밀한 역사] 마지막 주 안내입니다 🍊\n\n25장 영혼의 동료 사이에 가능한 일\n\n앞의 스물네 장이 여기로 모입니다.\n세상을 바꾸는 단위는 제도가 아니라 두 사람의 만남이라고, 젤딘은 말합니다.\n\n마무리 모임 질문도 함께 담았습니다.\n이 책을 읽고 실제로 다르게 해보기로 한 일 하나 —\n적어 오시면 일곱 주를 그것으로 닫겠습니다.\n\n' }
+];
+
+var BASE = 'https://outis-books.github.io/bookclub/intimate-history-w';
+var DAYS = ['일','월','화','수','목','금','토'];
+
+function fmt(iso) {
+  var p = iso.split('-');
+  var d = new Date(+p[0], +p[1] - 1, +p[2]);
+  return (+p[1]) + '월 ' + (+p[2]) + '일(' + DAYS[d.getDay()] + ')';
+}
+
+function pick() {
+  var t = new Date(); t.setHours(0,0,0,0);
+  for (var i = 0; i < WEEKS.length; i++) {
+    var p = WEEKS[i].date.split('-');
+    var d = new Date(+p[0], +p[1] - 1, +p[2]);
+    var from = new Date(d); from.setDate(d.getDate() - 2);
+    var to = new Date(d); to.setDate(d.getDate() + 5);
+    if (t >= from && t <= to) return i;
+  }
+  for (var j = 0; j < WEEKS.length; j++) {
+    var q = WEEKS[j].date.split('-');
+    if (new Date(+q[0], +q[1] - 1, +q[2]) >= t) return j;
+  }
+  return -1;
+}
+
+function copy(text, btn) {
+  var done = function () {
+    var old = btn.textContent;
+    btn.textContent = '복사됨';
+    btn.classList.add('ok');
+    setTimeout(function () { btn.textContent = old; btn.classList.remove('ok'); }, 1600);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); });
+  } else { fallback(text, done); }
+}
+function fallback(text, done) {
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) { prompt('아래를 복사하세요', text); }
+  document.body.removeChild(ta);
+}
+
+var now = pick();
+var list = document.getElementById('list');
+
+WEEKS.forEach(function (w, i) {
+  var url = BASE + w.n + '.html';
+  var card = document.createElement('div');
+  card.className = 'card' + (i === now ? ' now' : (now > -1 && i < now ? ' done' : ''));
+
+  var row = document.createElement('div');
+  row.className = 'row';
+  row.innerHTML = '<span class="wk">' + w.n + '주차</span><span class="when">' + fmt(w.date) + ' 발송</span>' +
+                  (i === now ? '<span class="flag">이번 주</span>' : '');
+  card.appendChild(row);
+
+  var h = document.createElement('h2'); h.textContent = w.theme; card.appendChild(h);
+  var c = document.createElement('div'); c.className = 'ch'; c.textContent = w.ch; card.appendChild(c);
+  var u = document.createElement('div'); u.className = 'url'; u.textContent = url; card.appendChild(u);
+
+  var btns = document.createElement('div'); btns.className = 'btns';
+
+  var b1 = document.createElement('button');
+  b1.className = 'main'; b1.textContent = '문구 복사';
+  b1.onclick = function () { copy(w.msg + url, b1); };
+  btns.appendChild(b1);
+
+  var b2 = document.createElement('button');
+  b2.textContent = '주소만 복사';
+  b2.onclick = function () { copy(url, b2); };
+  btns.appendChild(b2);
+
+  var a = document.createElement('a');
+  a.className = 'open'; a.href = url; a.target = '_blank'; a.rel = 'noopener';
+  a.textContent = '열어보기 →';
+  btns.appendChild(a);
+
+  card.appendChild(btns);
+  list.appendChild(card);
+});
+</script>
+</body>
+</html>
