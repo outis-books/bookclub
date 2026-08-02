@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>독서모임 · 호메로스 『일리아스』 — 하루 한 권, 네 주</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="우티스의 북살롱">
+<meta property="og:title" content="일리아스 — 분노에서 시작해 연민으로 닫힌다">
+<meta property="og:description" content="24권을 스무 번에 나눠 하루 한 권씩 · 회마다 논지와 밑줄 그을 자리, 함께 나눌 질문 셋">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://outis-books.github.io/bookclub/iliad.html">
+<meta property="og:image" content="https://outis-books.github.io/bookclub/og-bookclub.png">
+<meta name="description" content="호메로스 『일리아스』 독서모임 자료 — 24권을 20회로 나눠 네 주에 걸쳐 읽는 안내서">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.page { max-width: 720px; margin: 0 auto; padding: 72px 24px 100px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #aaa; margin-bottom: 48px; flex-wrap: wrap; }
+.breadcrumb a { color: #aaa; text-decoration: none; }
+.breadcrumb .sep { opacity: 0.4; }
+.article-header { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid #f0f0f0; }
+.meta { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.badge { font-family: 'DM Mono', monospace; font-size: 11px; padding: 3px 12px; border-radius: 100px; letter-spacing: 0.06em; }
+.badge-guide { background: #FAEEDA; color: #854F0B; }
+.dot { color: #ddd; font-size: 12px; }
+.meta-text { font-size: 12px; color: #999; font-family: 'DM Mono', monospace; }
+h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; line-height: 1.35; letter-spacing: -0.02em; margin-bottom: 14px; }
+.subtitle { font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 300; color: #777; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; padding: 3px 12px; border-radius: 100px; background: #f5f5f5; color: #888; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
+.step { display: flex; gap: 24px; margin-bottom: 52px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: #2B3A55; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px; flex-shrink: 0; margin-top: 6px; }
+.step-body { flex: 1; min-width: 0; }
+.step-title { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 400; margin-bottom: 16px; line-height: 1.4; letter-spacing: -0.01em; }
+.step-body p { color: #444; margin-bottom: 14px; font-size: 15px; line-height: 1.95; }
+.concept { display: flex; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden; margin: 24px 0; }
+.concept-term { background: #111; color: #fff; padding: 20px 22px; display: flex; align-items: center; justify-content: center; min-width: 120px; }
+.concept-term span { font-family: 'Noto Serif KR', serif; font-size: 16px; writing-mode: vertical-rl; letter-spacing: 0.1em; }
+.concept-def { padding: 20px 22px; flex: 1; }
+.concept-def .term-en { font-family: 'DM Mono', monospace; font-size: 11px; color: #aaa; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+.concept-def p { font-size: 14px; color: #444; line-height: 1.8; margin: 0; }
+.steps-3 { display: flex; flex-direction: column; gap: 10px; margin: 20px 0 4px; }
+.mini { display: flex; gap: 14px; align-items: flex-start; background: #fafafa; border: 1px solid #f0f0f0; border-radius: 12px; padding: 16px 20px; }
+.mini-n { font-family: 'DM Mono', monospace; font-size: 11px; color: #854F0B; flex-shrink: 0; margin-top: 4px; letter-spacing: 0.08em; }
+.mini p { font-size: 14px; color: #444; line-height: 1.8; margin: 0 !important; }
+.week { border: 1px solid #eee; border-radius: 14px; margin: 12px 0; overflow: hidden; background: #fff; }
+.week[open] { border-color: #ddd; }
+.week > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; background: #fafafa; transition: background 0.15s; }
+.week > summary::-webkit-details-marker { display: none; }
+.week > summary:hover { background: #f4f4f4; }
+.week[open] > summary { background: #2B3A55; }
+.week-no { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #854F0B; flex-shrink: 0; }
+.week[open] .week-no { color: #9FB0C9; }
+.week-theme { font-family: 'Noto Serif KR', serif; font-size: 16px; color: #222; flex: 1; line-height: 1.5; }
+.week[open] .week-theme { color: #f0ece4; }
+.week-days { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; flex-shrink: 0; }
+.week[open] .week-days { color: #8496b0; }
+.day { padding: 26px 22px; border-top: 1px solid #f2f2f2; }
+.day:first-of-type { border-top: none; }
+.day-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.day-no { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; color: #fff; background: #2B3A55; padding: 2px 9px; border-radius: 100px; flex-shrink: 0; }
+.day h4 { font-family: 'Noto Serif KR', serif; font-size: 16.5px; font-weight: 400; line-height: 1.5; color: #111; }
+.thesis { font-family: 'Noto Serif KR', serif; font-size: 15.5px; color: #2B3A55; line-height: 1.8; margin-bottom: 12px; padding-left: 14px; border-left: 2px solid #9FB0C9; }
+.how { font-size: 14.5px; color: #555; line-height: 1.9; margin-bottom: 16px; }
+.mark { background: #FDF8EF; border: 1px solid #F2E6CE; border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; }
+.mark-label { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; color: #854F0B; display: block; margin-bottom: 5px; }
+.mark p { font-size: 13.5px; color: #6b5330; line-height: 1.8; margin: 0; }
+.q-card { background: #fafafa; border: 1px solid #f0f0f0; border-radius: 12px; padding: 16px 20px; margin: 9px 0; }
+.q-num { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #854F0B; margin-bottom: 6px; }
+.q-card p { font-size: 14.5px; color: #333; line-height: 1.85; margin: 0; }
+.cta-box { background: #2B3A55; border-radius: 16px; padding: 40px; text-align: center; margin-top: 64px; }
+.cta-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #8496b0; margin-bottom: 16px; }
+.cta-text { font-family: 'Noto Serif KR', serif; color: #f0ece4; font-size: 20px; font-weight: 300; line-height: 1.7; margin-bottom: 28px; }
+.cta-sub { font-size: 13px; color: #9FB0C9; line-height: 1.7; }
+.footnote { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.06em; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f5f5f5; }
+p { color: #444; margin-bottom: 16px; }
+@media (max-width: 600px) { h1 { font-size: 26px; } .concept { flex-direction: column; } .concept-term { writing-mode: horizontal-tb; min-width: auto; } .concept-term span { writing-mode: horizontal-tb; } .page { padding: 48px 18px 80px; } .step { gap: 14px; } .day { padding: 22px 16px; } .week > summary { padding: 16px; } }
+@media print { .page { padding: 24px; } .week { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="page">
+<div class="breadcrumb">
+<a href="index.html">BOOK SALON</a><span class="sep">/</span><span>HOMER</span><span class="sep">/</span><span>ILIAS</span>
+</div>
+<div class="article-header">
+<div class="meta">
+<span class="badge badge-guide">벽돌책 완독 챌린지 2기</span>
+<span class="dot">·</span>
+<span class="meta-text">전 24권 · 스무 번에 나눠 · 2026. 4. 20 ~ 5. 21</span>
+</div>
+<h1>분노에서 시작해<br>연민으로 닫힌다</h1>
+<p class="subtitle">『일리아스』 — 하루 한 권씩, 네 주. 회마다 한 줄 논지와 밑줄 그을 자리, 그리고 함께 나눌 질문 셋.</p>
+<div class="tags">
+<span class="tag">호메로스</span><span class="tag">아킬레우스</span><span class="tag">헥토르</span><span class="tag">명예</span><span class="tag">운명</span><span class="tag">24권</span>
+</div>
+</div>
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-body">
+<h2 class="step-title">이 책은 어떤 책인가</h2>
+<p>서양 문학의 첫 책이다. 10년 전쟁의 전말이 아니라 <strong>그 마지막 해의 쉰 날 남짓</strong>을 다룬다. 시작은 한 사람의 분노고, 끝은 적과 적이 마주 앉아 함께 우는 장면이다.</p>
+<div class="concept">
+<div class="concept-term"><span>분노</span></div>
+<div class="concept-def">
+<span class="term-en">MENIN · 첫 단어이자 주제</span>
+<p>이 서사시의 첫 단어는 '분노'다. 아킬레우스의 분노는 성격 문제가 아니라 <strong>모욕당한 명예</strong>에서 나온다. 전리품은 물건이 아니라 공동체가 인정한 명예의 표시이기 때문이다. 그 분노가 어떻게 슬픔으로, 다시 연민으로 넘어가는지를 따라가는 것이 이 책을 읽는 일이다.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-body">
+<h2 class="step-title">어떻게 읽나</h2>
+<div class="steps-3">
+<div class="mini"><span class="mini-n">01</span><p><strong>하루 한 권, 주 5일, 네 주.</strong> 24권을 스무 번으로 나눴다. 짧고 이어지는 권 넷은 둘씩 묶어 하루에 읽는다.</p></div>
+<div class="mini"><span class="mini-n">02</span><p><strong>인물을 다 외우지 않는다.</strong> '누가 누구의 명예를 건드렸는가'와 '누가 누구를 잃는가' — 이 둘만 따라가면 훨씬 잘 읽힌다.</p></div>
+<div class="mini"><span class="mini-n">03</span><p><strong>두 개의 감정선.</strong> 그리스 쪽은 아킬레우스, 트로이 쪽은 헥토르. 이 둘이 만나는 22권이 이 책의 심장이다.</p></div>
+</div>
+</div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-body">
+<h2 class="step-title">스무 번, 네 주</h2>
+<p>주차를 눌러 그날의 권을 펼친다. 질문은 셋이지만, 한 개만 붙잡고 오래 머물러도 좋다.</p>
+<details class="week" open>
+<summary><span class="week-no">1주차</span><span class="week-theme">분노와 전열 — 1~8권</span><span class="week-days">4/20~4/24</span></summary>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 1</span><h4>제1권 「역병과 분노」</h4></div>
+<p class="thesis">이 책의 첫 단어는 분노다. 그리고 그 분노는 빼앗긴 물건이 아니라 <strong>공개적으로 깎인 명예</strong>에서 나온다.</p>
+<p class="how">아폴론 신관의 딸 크리세이스를 돌려주지 않은 아가멤논 때문에 그리스 진영에 역병이 퍼진다. 어쩔 수 없이 그녀를 돌려보낸 아가멤논은 대신 아킬레우스의 전리품 브리세이스를 빼앗는다. 아킬레우스는 전투 거부를 선언하고, 어머니 테티스가 제우스에게 아들의 원한을 갚아 달라 청한다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>첫 행 — '분노를 노래하소서'. 그리고 아킬레우스가 칼자루를 쥐었다 놓는 대목.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>공개적으로 체면이 깎였던 순간이 있나요. 그때 나는 무엇을 했나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>나에게 '전리품'에 해당하는 것 — 남들이 인정해 주어야 비로소 값이 나가는 것 — 은 무엇인가요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>화가 났을 때 나는 싸우는 쪽인가요, 물러나 버리는 쪽인가요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 2</span><h4>제2~3권 「시험과 군사 목록 · 성벽 위에서의 관망」</h4></div>
+<p class="thesis">전쟁의 크기를 보여준 뒤, 그 전쟁이 결국 두 사람의 문제였음을 보여준다.</p>
+<p class="how">아가멤논이 군대의 사기를 시험하고, 양측의 방대한 전력이 하나하나 호명된다(그 유명한 '배들의 목록'). 이어 3권에서는 파리스와 메넬라오스가 단둘이 결투해 전쟁을 끝내려 하지만, 아프로디테가 파리스를 채어 성안으로 도피시킨다. 성벽 위에서 헬레네가 그리스 장수들을 하나씩 알아보는 장면이 놓인다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>성벽 위에서 헬레네가 옛사람들을 알아보는 대목. 전쟁의 원인이라 불린 여자가 어떤 마음으로 그것을 내려다보는지.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>큰 갈등이 사실은 두 사람 사이의 일이었던 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>내가 원인으로 지목된 적이 있나요. 그때 나는 어떤 자리에 있었나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>끝낼 수 있었는데 끝내지 못한 싸움이 있나요. 무엇이 막았나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 3</span><h4>제4~5권 「선서 파기 · 디오메데스의 무쌍」</h4></div>
+<p class="thesis">약속은 신들이 먼저 깬다. 그리고 인간은 그 판 위에서 최선을 다한다.</p>
+<p class="how">신들의 책략으로 휴전 약속이 깨지고 본격적인 전쟁이 터진다. 5권에서는 아테나의 가호를 받은 디오메데스가 눈부시게 활약한다. 아프로디테와 아레스에게까지 상처를 입히며, 인간이 신을 찌르는 드문 장면을 만든다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>디오메데스가 신에게 창을 겨누는 대목. 인간이 어디까지 갈 수 있는지를 보여주는 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>내가 어쩔 수 없었던 판 위에서 최선을 다해 본 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>누군가 약속을 깼을 때, 나는 그 판을 떠났나요 남았나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>아킬레우스가 빠진 자리를 디오메데스가 메웁니다. 누군가 빠진 자리를 내가 메워 본 적이 있나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 4</span><h4>제6권 「헥토르와 안드로마케의 만남」</h4></div>
+<p class="thesis">적에게도 아내가 있고 아이가 있다. 이 한 장면이 전쟁담을 <strong>상실의 이야기</strong>로 바꾼다.</p>
+<p class="how">전쟁터로 떠나는 헥토르와 아내 안드로마케의 작별. 아이가 아버지의 투구 깃털에 놀라 울자 헥토르가 투구를 벗고 웃는다. 트로이 쪽 인물들이 단순한 적이 아니라 가족과 삶을 지닌 인간이라는 점을 가장 깊이 보여주는 대목이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>투구를 벗고 아이를 안는 장면. 이 책에서 가장 많이 인용되는 몇 쪽 중 하나.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>지켜야 할 것 때문에 나가야 했던 자리가 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>미워하던 사람에게도 가족이 있다는 걸 문득 깨달은 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>돌아오지 못할 수도 있다고 생각하며 나눈 인사가 있나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 5</span><h4>제7~8권 「헥토르와 아이아스의 결투 · 중단된 전투」</h4></div>
+<p class="thesis">싸우면서도 서로를 알아본다. 그러나 판을 뒤집는 것은 늘 위에서 온다.</p>
+<p class="how">헥토르와 대(大)아이아스가 결투하지만 승부를 가리지 못하고, 서로의 무용을 칭송하며 선물을 교환한다. 이어 제우스가 신들의 개입을 엄금하자 흐름이 트로이 쪽으로 기울고, 트로이군이 그리스 함선 앞까지 진격한다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>적끼리 선물을 주고받는 대목. 명예가 무엇인지 가장 담백하게 드러나는 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>겨루면서 오히려 존경하게 된 상대가 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>내 힘 밖의 결정으로 판이 뒤집힌 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>이기지 못했지만 잘 싸웠다고 말할 수 있는 일이 있나요.</p></div>
+</div>
+</details>
+<details class="week">
+<summary><span class="week-no">2주차</span><span class="week-theme">위기와 맹공 — 9~14권</span><span class="week-days">4/27~5/1</span></summary>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 6</span><h4>제9권 「사절단」</h4></div>
+<p class="thesis">사과를 받고도 돌아가지 않는 사람이 있다. 그는 고집이 아니라 <strong>다른 셈법</strong>을 쓰고 있다.</p>
+<p class="how">위기를 느낀 아가멤논이 아킬레우스에게 사죄의 사절을 보낸다. 어마어마한 보상이 제시되지만 아킬레우스는 복귀를 거부한다. 그가 단순히 고집을 부리는 것이 아니라, 명예를 어떻게 받아들이는 인물인지를 보여주는 핵심 장면이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>아킬레우스가 보상 목록을 듣고 답하는 긴 대사. 값으로 매길 수 없는 것에 대한 이야기.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>사과를 받고도 풀리지 않았던 적이 있나요. 무엇이 남아 있었나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>돈이나 조건으로 대신할 수 없는 것이 나에게 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>돌아오라는 청을 거절해 본 적이 있나요. 지금은 어떻게 보나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 7</span><h4>제10~11권 「돌론 이야기 · 아가멤논의 활약」</h4></div>
+<p class="thesis">밤에는 다른 종류의 용기가 필요하고, 낮에는 아무리 분전해도 기울 때가 있다.</p>
+<p class="how">오디세우스와 디오메데스가 밤중에 적진에 침투해 정찰하고 적들을 살상한다. 이어 아가멤논이 몸소 분전하지만 주요 장수들이 잇달아 부상하며 그리스군은 다시 수세에 몰린다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>어둠 속의 정찰 장면. 영웅담에서 좀처럼 보기 어려운 결의 용기가 여기 있다.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>눈에 띄지 않는 자리에서 해낸 일이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>내가 앞장섰는데도 상황이 나빠졌던 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>주변 사람들이 하나씩 쓰러질 때 나는 어떻게 했나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 8</span><h4>제12권 「방벽 앞에서의 전투」</h4></div>
+<p class="thesis">쌓아 둔 벽은 언젠가 무너진다. 문제는 그 뒤에 무엇이 남는가다.</p>
+<p class="how">헥토르가 그리스 진영의 방어 벽을 부수고 안으로 난입한다. 안전하다고 믿었던 경계가 뚫리는 순간이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>헥토르가 성문의 빗장을 부수는 대목.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>안전하다고 믿었던 것이 무너진 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>지금 내가 쌓고 있는 벽은 무엇을 막기 위한 것인가요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>벽이 무너진 뒤에 오히려 알게 된 것이 있었나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 9</span><h4>제13권 「함선 앞에서의 전투」</h4></div>
+<p class="thesis">누군가 몰래 돕고 있어도, 기세는 쉽게 꺾이지 않는다.</p>
+<p class="how">포세이돈이 제우스 몰래 그리스군을 돕는다. 전열이 잠시 버티지만 헥토르의 기세는 꺾이지 않는다. 함선은 그리스군에게 마지막 보루다 — 배가 불타면 돌아갈 길이 없다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>배가 곧 돌아갈 길이라는 사실이 드러나는 대목.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>나에게 '배' — 잃으면 돌아갈 곳이 없어지는 것 — 은 무엇인가요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>몰래 나를 도운 사람이 있었다는 걸 나중에 안 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>버티기만 하던 시기가 있었나요. 무엇으로 버텼나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 10</span><h4>제14권 「제우스의 유혹」</h4></div>
+<p class="thesis">힘으로 안 되면 다른 길이 있다. 신들도 그렇게 한다.</p>
+<p class="how">헤라가 치장을 하고 제우스를 유혹해 잠들게 한다. 그 사이 그리스군이 잠시 반격의 기회를 잡는다. 서사시 한가운데 놓인, 뜻밖에 능청스러운 장면이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>헤라가 준비하는 대목. 정면으로 부딪히지 않고 이기는 법에 관하여.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>정면으로 부딪히지 않고 풀어 본 일이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>그 방법을 쓰고 나서 마음이 어땠나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>내가 가진 힘 중 '힘'이 아닌 것은 무엇인가요.</p></div>
+</div>
+</details>
+<details class="week">
+<summary><span class="week-no">3주차</span><span class="week-theme">파트로클로스의 죽음 — 15~19권</span><span class="week-days">5/4~5/8</span></summary>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 11</span><h4>제15권 「함선으로부터의 반격」</h4></div>
+<p class="thesis">잠에서 깬 힘은 더 사납다.</p>
+<p class="how">잠에서 깬 제우스가 격노하며 다시 트로이를 돕는다. 헥토르는 마침내 그리스 함선에 불을 지르려 한다. 그리스군은 벼랑 끝에 선다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>배에 불이 붙기 직전의 긴장. 다음 권으로 넘어가는 다리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>더는 물러설 데가 없다고 느낀 순간이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>그때 누가 나서 주었나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>벼랑 끝에서 내가 붙든 것은 무엇이었나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 12</span><h4>제16권 「파트로클로스의 최후」</h4></div>
+<p class="thesis">이 책의 방향을 바꾸는 것은 전략이 아니라 <strong>친구의 죽음</strong>이다.</p>
+<p class="how">친구의 간청에 아킬레우스가 자신의 갑옷을 빌려준다. 파트로클로스는 용맹하게 싸우다 헥토르에게 살해당한다. 이 죽음은 전사 한 명의 죽음이 아니라, 멈춰 있던 아킬레우스를 다시 전장으로 끌어내는 결정적 전환점이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>갑옷을 빌려주며 아킬레우스가 당부하는 대목. 그리고 파트로클로스가 쓰러지는 장면.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>내가 움직이지 않다가, 누군가 때문에 움직인 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>나 대신 나선 사람이 있었나요. 그 빚을 어떻게 갚았나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>가장 소중한 사람을 잃는다면, 나는 무엇이 달라질까요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 13</span><h4>제17권 「메넬라오스의 무용」</h4></div>
+<p class="thesis">시신을 지키는 싸움은 죽은 자가 아니라 산 자를 위한 것이다.</p>
+<p class="how">파트로클로스의 시신을 빼앗기지 않으려는 그리스군과 트로이군의 처절한 쟁탈전. 이미 죽은 사람을 두고 수많은 사람이 다시 죽는다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>시신 쟁탈전이 길게 이어지는 대목. 왜 이토록 애쓰는지 생각하며 읽을 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>떠난 사람을 위해 남은 사람들이 애쓰는 모습을 본 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>장례는 죽은 이를 위한 것일까요, 산 사람을 위한 것일까요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>내가 끝까지 지키고 싶은 것은 무엇인가요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 14</span><h4>제18권 「방패 제작」</h4></div>
+<p class="thesis">전쟁 한가운데 놓인 방패 위에, 전쟁이 아닌 <strong>세상 전체</strong>가 새겨진다.</p>
+<p class="how">친구의 죽음에 절규하는 아킬레우스. 대장장이 신 헤파이스토스가 그를 위해 새 갑옷과 방패를 만든다. 방패에는 결혼식과 재판, 밭갈이와 추수, 춤추는 사람들 — 인간 세계 전체의 질서와 삶이 압축되어 새겨진다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>방패 묘사 전체. 이 책에서 가장 유명한 대목이며, 싸우는 이유가 무엇인지를 말없이 보여주는 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>내 방패에 새긴다면 어떤 장면을 새기고 싶은가요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>싸움 한가운데서도 지켜야 할 일상이 있다면 무엇인가요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>슬픔이 가장 클 때 나는 무엇을 만들거나 손에 쥐나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 15</span><h4>제19권 「분노의 포기」</h4></div>
+<p class="thesis">분노를 내려놓았지만 평화가 온 것은 아니다. 더 깊은 것으로 바뀌었을 뿐이다.</p>
+<p class="how">아킬레우스가 아가멤논과 화해한다. 그러나 그것은 용서가 아니라, 오직 헥토르를 향한 복수를 위해 앞의 다툼을 치우는 일이다. 그는 먹지도 않고 전장으로 돌아간다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>화해가 이루어지는 대목. 무엇이 실제로 풀렸고 무엇이 풀리지 않았는지 살펴볼 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>화해했지만 마음은 풀리지 않았던 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>더 큰 일이 생겨 작은 다툼이 하찮아진 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>내 분노가 다른 감정으로 바뀐 적이 있나요. 무엇으로 바뀌었나요.</p></div>
+</div>
+</details>
+<details class="week">
+<summary><span class="week-no">4주차</span><span class="week-theme">헥토르의 죽음과 화해 — 20~24권</span><span class="week-days">5/11~5/15</span></summary>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 16</span><h4>제20권 「신들의 전투」</h4></div>
+<p class="thesis">위가 갈라지면 아래는 혼돈이 된다.</p>
+<p class="how">제우스가 신들의 개입을 공식 허용하자, 지상에는 거대한 혼돈이 펼쳐진다. 신들끼리 편을 갈라 맞붙고 그 밑에서 인간들이 부딪힌다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>신들이 편을 갈라 마주 서는 대목. 이 전쟁이 누구의 전쟁인지 다시 묻게 되는 자리.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>윗선이 갈라져 아래가 힘들었던 경험이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>내 싸움인 줄 알았는데 남의 싸움이었던 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>혼돈 속에서 내가 붙잡은 기준은 무엇이었나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 17</span><h4>제21권 「강가에서의 전투」</h4></div>
+<p class="thesis">복수는 사람을 넘어 자연과도 싸우게 만든다.</p>
+<p class="how">아킬레우스가 스카만드로스 강물을 시체와 피로 물들이고, 참다못해 일어선 강물 신과도 대결한다. 인간의 분노가 어디까지 번질 수 있는지를 보여주는 권이다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>강이 아킬레우스에게 항의하는 대목.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>화가 나서 상관없는 것까지 상하게 한 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>누군가 나에게 '그만하라'고 말해 준 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>내 안의 분노에 한계선이 있다면 어디쯤일까요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 18</span><h4>제22권 「헥토르의 죽음」</h4></div>
+<p class="thesis">영웅성과 잔혹함이 한 사람 안에서 가장 선명하게 드러나는 자리.</p>
+<p class="how">운명의 대결 끝에 아킬레우스가 헥토르를 죽인다. 그러나 거기서 멈추지 않고, 복수심에 눈이 멀어 시신을 전차에 매달아 성벽 둘레를 끈다. 성벽 위에서는 아내와 부모가 그것을 본다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>헥토르가 죽기 직전 남기는 말. 그리고 성벽 위 안드로마케가 그 소식을 듣는 순간.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>이겼는데 마음이 나아지지 않았던 일이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>멈춰야 할 자리에서 멈추지 못한 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>헥토르는 이길 수 없음을 알고도 나섭니다. 그런 선택을 해 본 적이 있나요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 19</span><h4>제23권 「장례 경기」</h4></div>
+<p class="thesis">애도는 슬픔만으로 이루어지지 않는다. 사람들은 모여 먹고 겨루며 떠나보낸다.</p>
+<p class="how">파트로클로스의 장례를 치르고, 영웅들이 모여 전차 경주와 씨름과 달리기를 한다. 방금 전까지 죽고 죽이던 사람들이 규칙 있는 겨룸으로 돌아온다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>경기 중 다툼이 벌어졌다가 곧 수습되는 대목. 전쟁과 경기의 차이가 여기 있다.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>내가 겪은 장례에서 가장 오래 남은 장면은 무엇인가요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>슬픔을 함께 치르는 우리만의 방식이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>규칙이 있는 겨룸과 없는 싸움은 무엇이 다른가요.</p></div>
+</div>
+<div class="day">
+<div class="day-head"><span class="day-no">DAY 20</span><h4>제24권 「헥토르의 시신 인도」</h4></div>
+<p class="thesis">이 책은 승리로 끝나지 않는다. <strong>적과 적이 마주 앉아 함께 우는 장면</strong>에서 끝난다.</p>
+<p class="how">늙은 왕 프리아모스가 홀로 적진에 들어가, 아들을 죽인 사람의 손에 입을 맞추며 시신을 돌려 달라 청한다. 두 사람은 각자의 죽은 이를 떠올리며 함께 운다. 아킬레우스는 시신을 내어주고 장례를 위한 휴전까지 약속한다.</p>
+<div class="mark"><span class="mark-label">밑줄 그을 자리</span><p>프리아모스가 아킬레우스의 손에 입 맞추는 대목. 그리고 둘이 마주 앉아 우는 장면 — 이 책의 결론이 여기 있다.</p></div>
+<div class="q-card"><div class="q-num">Q1</div><p>미워하던 사람과 같은 슬픔을 나눠 본 적이 있나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>용서가 아니라 연민으로 풀린 관계가 있나요. 둘은 어떻게 다를까요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>내가 지금 찾아가야 할 사람이 있다면 누구인가요.</p></div>
+</div>
+</details>
+</div>
+</div>
+<div class="step">
+<div class="step-num">4</div>
+<div class="step-body">
+<h2 class="step-title">마무리 모임 — 전체를 놓고</h2>
+<div class="q-card"><div class="q-num">Q1</div><p>이 책은 분노로 시작해 연민으로 끝납니다. 스무 번을 걸어 오며, 그 전환이 일어난 대목은 어디였다고 보시나요.</p></div>
+<div class="q-card"><div class="q-num">Q2</div><p>신들은 정의로운 심판자가 아니라 편애하고 질투하는 존재로 그려집니다. 그렇다면 이 이야기에서 인간의 몫은 무엇일까요.</p></div>
+<div class="q-card"><div class="q-num">Q3</div><p>아킬레우스와 헥토르 중, 나는 어느 쪽에 더 마음이 갔나요. 왜였나요.</p></div>
+</div>
+</div>
+<div class="cta-box">
+<div class="cta-label">벽돌책 완독 챌린지 2기</div>
+<p class="cta-text">읽어야 쓸 수 있고,<br>물어야 나눌 수 있습니다.</p>
+<p class="cta-sub">2026. 4. 20 ~ 5. 21 · 하루 한 권, 스무 번</p>
+</div>
+<p class="footnote">우티스의 북살롱 · 호메로스 『일리아스』 · 전 24권을 20회로</p>
+</div>
+</body>
+</html>
