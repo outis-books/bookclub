@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>우티스의 북살롱 서재 — 벽돌책 완독 챌린지</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="우티스의 북살롱">
+<meta property="og:title" content="우티스의 북살롱 서재">
+<meta property="og:description" content="벽돌책을 하루 한 장씩. 1기 돈키호테부터 지금 읽는 책까지, 모임 자료가 기수 순으로 모여 있습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://outis-books.github.io/bookclub/">
+<meta property="og:image" content="https://outis-books.github.io/bookclub/og-bookclub.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #aaa; margin-bottom: 48px; }
+.breadcrumb .sep { color: #ddd; }
+h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; line-height: 1.35; letter-spacing: -0.02em; margin-bottom: 14px; }
+.subtitle { font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 300; color: #777; line-height: 1.8; margin-bottom: 20px; }
+.intro { color: #666; font-size: 15px; line-height: 1.95; padding-bottom: 40px; border-bottom: 1px solid #f0f0f0; }
+.section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin: 56px 0 20px; }
+.now { background: #2C3B2D; border-radius: 16px; padding: 34px 32px; color: #f0ece4; }
+.now .tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #a8c3a9; border: 1px solid #4d6a4f; border-radius: 100px; padding: 2px 12px; margin-bottom: 18px; }
+.now h2 { font-family: 'Noto Serif KR', serif; font-size: 25px; font-weight: 400; line-height: 1.45; margin-bottom: 10px; }
+.now h2 a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+.now h2 a:hover { border-bottom-color: #fff; }
+.now .by { font-family: 'DM Mono', monospace; font-size: 12px; color: #93ad94; letter-spacing: 0.04em; margin-bottom: 20px; }
+.now p { font-size: 15px; color: #cfd8cf; line-height: 1.9; margin-bottom: 24px; }
+.weeks { display: flex; flex-wrap: wrap; gap: 8px; }
+.weeks a { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #dfe7df; text-decoration: none; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 100px; padding: 5px 14px; }
+.weeks a:hover { background: rgba(255,255,255,.18); }
+.season { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid #f2f2f2; }
+.season:last-child { border-bottom: none; }
+.season-num { flex-shrink: 0; width: 44px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #854F0B; padding-top: 4px; }
+.season-body { flex: 1; }
+.season-body h3 { font-family: 'Noto Serif KR', serif; font-size: 19px; font-weight: 400; line-height: 1.5; margin-bottom: 4px; letter-spacing: -0.01em; }
+.season-body h3 a { color: #111; text-decoration: none; border-bottom: 1px solid #ddd; }
+.season-body h3 a:hover { border-bottom-color: #111; }
+.season-body .by { font-family: 'DM Mono', monospace; font-size: 12px; color: #aaa; letter-spacing: 0.04em; }
+.season-body .note { font-size: 14px; color: #999; margin-top: 6px; }
+.soon { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #bbb; background: #fafafa; border: 1px solid #f0f0f0; border-radius: 100px; padding: 2px 10px; display: inline-block; margin-top: 8px; }
+.season.dim h3 { color: #999; }
+.footnote { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.06em; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f5f5f5; line-height: 2; }
+@media (max-width: 520px) {
+h1 { font-size: 28px; }
+.now { padding: 28px 22px; }
+.season { gap: 14px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="breadcrumb">
+<span>BOOK SALON</span><span class="sep">/</span><span>OUTIS</span><span class="sep">/</span><span>LIBRARY</span>
+</div>
+<h1>우티스의 북살롱 서재</h1>
+<p class="subtitle">벽돌책을 하루 한 장씩.</p>
+<p class="intro">
+두꺼워서 혼자서는 끝까지 못 가는 책들이 있습니다. 그런 책만 골라 여럿이 함께 걷습니다.
+하루에 한 장씩 읽고, 그날의 질문 몇 개에 몇 줄 적고, 일주일에 한 번 모여 나눕니다.
+지나온 기수의 자료를 여기에 모아 둡니다. 모임에 없으셨던 분도 그대로 펴서 쓰실 수 있습니다.
+</p>
+<p class="section-label">지금 읽는 책</p>
+<div class="now">
+<span class="tag">4기 · 진행 중</span>
+<h2><a href="intimate-history.html">인간의 내밀한 역사</a></h2>
+<p class="by">시어도어 젤딘 · 어크로스 · 전 25장</p>
+<p>
+감정과 습관의 역사. 대화, 고독, 두려움, 호기심 같은 것들이 언제 생겨나 어떻게 변해왔는지를 따라갑니다.
+하루 한 장, 일주일에 네 장, 일곱 주.
+</p>
+<div class="weeks">
+<a href="intimate-history-w1.html">1주차</a>
+<a href="intimate-history-w2.html">2주차</a>
+<a href="intimate-history-w3.html">3주차</a>
+<a href="intimate-history-w4.html">4주차</a>
+<a href="intimate-history-w5.html">5주차</a>
+<a href="intimate-history-w6.html">6주차</a>
+<a href="intimate-history-w7.html">7주차</a>
+</div>
+</div>
+<p class="section-label">벽돌책 완독 챌린지</p>
+<div class="season dim">
+<div class="season-num">1기</div>
+<div class="season-body">
+<h3>돈키호테</h3>
+<p class="by">세르반테스 · 전 2권 126장</p>
+<span class="soon">자료 준비 중</span>
+</div>
+</div>
+<div class="season dim">
+<div class="season-num">2기</div>
+<div class="season-body">
+<h3>일리아스</h3>
+<p class="by">호메로스 · 전 24권</p>
+<span class="soon">자료 준비 중</span>
+</div>
+</div>
+<div class="season">
+<div class="season-num">3기</div>
+<div class="season-body">
+<h3><a href="poetry-and-truth.html">시와 진실</a></h3>
+<p class="by">괴테 · 동서문화사 · 4부 20장</p>
+<p class="note">예순의 괴테가 스물여섯의 자신을 다시 쓰다. 4주 과정 · 하루 한 챕터씩 주 5일 · 스무 챕터.</p>
+</div>
+</div>
+<div class="season">
+<div class="season-num">4기</div>
+<div class="season-body">
+<h3><a href="intimate-history.html">인간의 내밀한 역사</a></h3>
+<p class="by">시어도어 젤딘 · 어크로스 · 전 25장</p>
+<p class="note">하루 한 장, 일곱 주. 지금 걷고 있습니다.</p>
+</div>
+</div>
+<p class="section-label">그 밖의 모임</p>
+<div class="season">
+<div class="season-num">—</div>
+<div class="season-body">
+<h3><a href="hunting-sketches.html">사냥스케치</a></h3>
+<p class="by">투르게네프 · 25편</p>
+<p class="note">작품별 줄거리와 인물, 그리고 질문 셋.</p>
+</div>
+</div>
+<p class="footnote">
+우티스의 북살롱 · 하루 한 장, 끝까지<br>
+자료는 모임에 오시지 않은 분도 자유롭게 쓰실 수 있습니다.
+</p>
+</div>
+</body>
+</html>
