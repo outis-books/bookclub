@@ -23,15 +23,18 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 .intro { color: #666; font-size: 15px; line-height: 1.95; padding-bottom: 36px; border-bottom: 1px solid #f0f0f0; }
 .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin: 48px 0 18px; }
 .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.card { border: 1px solid #eee; border-radius: 14px; padding: 24px 24px 22px; display: flex; flex-direction: column; background: #fff; transition: border-color .15s, box-shadow .15s; }
-.card:hover { border-color: #ccc; box-shadow: 0 2px 14px rgba(0,0,0,.05); }
-.card.now { border-color: #2C3B2D; }
+.card { --accent: #aaa; --tint: #f6f6f6; border: 1px solid #eee; border-left: 5px solid var(--accent); border-radius: 14px; padding: 24px 24px 22px; display: flex; flex-direction: column; background: #fff; transition: border-color .15s, box-shadow .15s; }
+.card:hover { border-color: #ddd; border-left-color: var(--accent); box-shadow: 0 2px 14px rgba(0,0,0,.06); }
 .card.soon { background: #fbfbfb; }
+.c1 { --accent: #A65A3C; --tint: #f8efe9; }
+.c2 { --accent: #3E5C76; --tint: #eaf0f5; }
+.c3 { --accent: #6E4C6B; --tint: #f2ecf2; }
+.c4 { --accent: #2C3B2D; --tint: #eaf0ea; }
 .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-.no { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #854F0B; }
+.no { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; font-weight: 500; color: var(--accent); background: var(--tint); border-radius: 100px; padding: 2px 10px; }
 .state { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; border-radius: 100px; padding: 2px 10px; }
 .state-done { background: #f4f4f4; color: #999; }
-.state-now { background: #2C3B2D; color: #fff; }
+.state-now { background: var(--accent); color: #fff; }
 .state-soon { background: #fafafa; color: #bbb; border: 1px solid #eee; }
 .card h2 { font-family: 'Noto Serif KR', serif; font-size: 21px; font-weight: 400; line-height: 1.45; letter-spacing: -0.01em; margin-bottom: 6px; }
 .card h2 a { color: #111; text-decoration: none; border-bottom: 1px solid #ddd; }
@@ -39,8 +42,8 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 .card .by { font-family: 'DM Mono', monospace; font-size: 12px; color: #aaa; letter-spacing: 0.03em; margin-bottom: 12px; }
 .card .note { font-size: 14px; color: #777; line-height: 1.85; flex: 1; }
 .weeks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-.weeks a { font-family: 'DM Mono', monospace; font-size: 11.5px; color: #4a6b4c; text-decoration: none; background: #f3f6f3; border: 1px solid #e3ebe4; border-radius: 100px; padding: 3px 11px; }
-.weeks a:hover { background: #e6ede7; }
+.weeks a { font-family: 'DM Mono', monospace; font-size: 11.5px; color: var(--accent); text-decoration: none; background: var(--tint); border: 1px solid rgba(0,0,0,.06); border-radius: 100px; padding: 3px 11px; }
+.weeks a:hover { border-color: var(--accent); }
 .other { display: flex; gap: 18px; padding: 20px 0; border-top: 1px solid #f2f2f2; }
 .other .by { font-family: 'DM Mono', monospace; font-size: 12px; color: #aaa; }
 .other h3 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 400; margin-bottom: 3px; }
@@ -67,25 +70,25 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 </p>
 <p class="section-label">벽돌책 완독 챌린지</p>
 <div class="grid">
-<div class="card">
+<div class="card c1">
 <div class="card-top"><span class="no">1기</span><span class="state state-done">완독</span></div>
 <h2><a href="don-quixote.html">돈키호테</a></h2>
 <p class="by">세르반테스 · 열린책들 · 전 2권 126장 · 2026. 1. 5 ~ 3. 19</p>
 <p class="note">기사도의 시대가 끝난 자리에서, 끝까지 믿기를 택한 사람의 이야기. 하루 두 장, 열 주.</p>
 </div>
-<div class="card">
+<div class="card c2">
 <div class="card-top"><span class="no">2기</span><span class="state state-done">완독</span></div>
 <h2><a href="iliad.html">일리아스</a></h2>
 <p class="by">호메로스 · 전 24권을 20회로 · 2026. 4. 20 ~ 5. 21</p>
 <p class="note">분노에서 시작해 연민으로 닫히는, 서양 문학의 첫 책.</p>
 </div>
-<div class="card">
+<div class="card c3">
 <div class="card-top"><span class="no">3기</span><span class="state state-done">완독</span></div>
 <h2><a href="poetry-and-truth.html">시와 진실</a></h2>
 <p class="by">괴테 · 동서문화사 · 4부 20장</p>
 <p class="note">예순의 괴테가 스물여섯의 자신을 다시 쓰다. 하루 한 장, 주 5일, 네 주.</p>
 </div>
-<div class="card now">
+<div class="card c4 now">
 <div class="card-top"><span class="no">4기</span><span class="state state-now">진행 중</span></div>
 <h2><a href="intimate-history.html">인간의 내밀한 역사</a></h2>
 <p class="by">시어도어 젤딘 · 어크로스 · 전 25장</p>
