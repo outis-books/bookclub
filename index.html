@@ -50,10 +50,15 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 .other .by { font-family: 'DM Mono', monospace; font-size: 12px; color: #8b8b8b; }
 .other h3 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 400; margin-bottom: 3px; }
 .other h3 a { color: #4A4A44; text-decoration: none; border-bottom: 2px solid rgba(0,0,0,.12); }
-.alsoby { margin-top: 46px; padding: 20px 24px; background: #F6EFE2; border: 1px solid rgba(0,0,0,.07); border-left: 7px solid #8A5A16; border-radius: 14px; }
-.alsoby .label { display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A16; margin-bottom: 6px; }
-.alsoby a { font-family: 'Noto Serif KR', serif; font-size: 17px; color: #6B450F; text-decoration: none; border-bottom: 2px solid rgba(0,0,0,.12); }
-.alsoby a:hover { border-bottom-color: #6B450F; }
+/* 모임지기의 칼럼 — 맨 위, 블록 전체가 눌리는 버튼 */
+.column-cta { display: flex; align-items: center; gap: 22px; margin: 30px 0 4px; padding: 24px 26px; background: #F6EFE2; border: 1px solid rgba(138,90,22,.18); border-left: 7px solid #8A5A16; border-radius: 14px; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s, background .15s; }
+.column-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(138,90,22,.16); background: #F3E8D6; }
+.column-cta .body { flex: 1; }
+.column-cta .label { display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A5A16; margin-bottom: 6px; }
+.column-cta .title { display: block; font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 400; color: #6B450F; line-height: 1.4; letter-spacing: -0.01em; }
+.column-cta .desc { display: block; font-size: 14px; color: #8a7051; line-height: 1.8; margin-top: 5px; }
+.column-cta .go { flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 12.5px; letter-spacing: 0.04em; color: #fff; background: #8A5A16; border-radius: 100px; padding: 9px 18px; white-space: nowrap; }
+@media (max-width: 680px) { .column-cta { flex-direction: column; align-items: flex-start; gap: 16px; } }
 .footnote { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.06em; margin-top: 56px; padding-top: 24px; border-top: 1px solid #f5f5f5; line-height: 2; }
 @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 27px; } .wrap { padding: 44px 18px 70px; } }
 </style>
@@ -70,26 +75,18 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 하루에 한 장씩 읽고, 그날의 질문 몇 개에 몇 줄 적고, 한 주에 한 번 모여 나눕니다.
 1기부터 지금까지의 자료를 여기에 모아 둡니다. 모임에 없으셨던 분도 그대로 펴서 쓰실 수 있습니다.
 </p>
+
+<a class="column-cta" href="https://outis-books.github.io/column/">
+<span class="body">
+<span class="label">모임지기의 칼럼 · 한국강사신문 연재</span>
+<span class="title">이서윤의 문장연구소</span>
+<span class="desc">책과 삶을 나란히 놓고 읽습니다. 연재분 전편을 한자리에서 보실 수 있습니다.</span>
+</span>
+<span class="go">칼럼 읽으러 가기 →</span>
+</a>
+
 <p class="section-label">벽돌책 완독 챌린지</p>
 <div class="grid">
-<div class="card c1">
-<div class="card-top"><span class="no">1기</span><span class="state state-done">완독</span></div>
-<h2><a href="don-quixote.html">돈키호테</a></h2>
-<p class="by">세르반테스 · 열린책들 · 전 2권 126장 · 2026. 1. 5 ~ 3. 19</p>
-<p class="note">기사도의 시대가 끝난 자리에서, 끝까지 믿기를 택한 사람의 이야기. 하루 두 장, 열 주.</p>
-</div>
-<div class="card c2">
-<div class="card-top"><span class="no">2기</span><span class="state state-done">완독</span></div>
-<h2><a href="iliad.html">일리아스</a></h2>
-<p class="by">호메로스 · 전 24권을 20회로 · 2026. 4. 20 ~ 5. 21</p>
-<p class="note">분노에서 시작해 연민으로 닫히는, 서양 문학의 첫 책.</p>
-</div>
-<div class="card c3">
-<div class="card-top"><span class="no">3기</span><span class="state state-done">완독</span></div>
-<h2><a href="poetry-and-truth.html">시와 진실</a></h2>
-<p class="by">괴테 · 동서문화사 · 4부 20장</p>
-<p class="note">예순의 괴테가 스물여섯의 자신을 다시 쓰다. 하루 한 장, 주 5일, 네 주.</p>
-</div>
 <div class="card c4 now">
 <div class="card-top"><span class="no">4기</span><span class="state state-now">진행 중</span></div>
 <h2><a href="intimate-history.html">인간의 내밀한 역사</a></h2>
@@ -105,6 +102,24 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 <a href="intimate-history-w7.html">7주</a>
 </div>
 </div>
+<div class="card c3">
+<div class="card-top"><span class="no">3기</span><span class="state state-done">완독</span></div>
+<h2><a href="poetry-and-truth.html">시와 진실</a></h2>
+<p class="by">괴테 · 동서문화사 · 4부 20장</p>
+<p class="note">예순의 괴테가 스물여섯의 자신을 다시 쓰다. 하루 한 장, 주 5일, 네 주.</p>
+</div>
+<div class="card c2">
+<div class="card-top"><span class="no">2기</span><span class="state state-done">완독</span></div>
+<h2><a href="iliad.html">일리아스</a></h2>
+<p class="by">호메로스 · 전 24권을 20회로 · 2026. 4. 20 ~ 5. 21</p>
+<p class="note">분노에서 시작해 연민으로 닫히는, 서양 문학의 첫 책.</p>
+</div>
+<div class="card c1">
+<div class="card-top"><span class="no">1기</span><span class="state state-done">완독</span></div>
+<h2><a href="don-quixote.html">돈키호테</a></h2>
+<p class="by">세르반테스 · 열린책들 · 전 2권 126장 · 2026. 1. 5 ~ 3. 19</p>
+<p class="note">기사도의 시대가 끝난 자리에서, 끝까지 믿기를 택한 사람의 이야기. 하루 두 장, 열 주.</p>
+</div>
 </div>
 <p class="section-label">그 밖의 모임</p>
 <div class="other">
@@ -113,10 +128,6 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 <p class="by">투르게네프 · 25편 · 작품별 줄거리와 인물, 질문 셋</p>
 </div>
 </div>
-<p class="alsoby">
-<span class="label">모임지기의 칼럼</span>
-<a href="https://outis-books.github.io/column/">이서윤의 문장연구소 — 한국강사신문 연재 33편 →</a>
-</p>
 <p class="footnote">
 우티스의 북살롱 · 하루 한 장, 끝까지<br>
 자료는 모임에 오시지 않은 분도 자유롭게 쓰실 수 있습니다.
