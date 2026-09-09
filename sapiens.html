@@ -106,11 +106,14 @@ footer .logo{font-family:'Noto Serif KR';font-weight:700;font-size:16px;color:va
 }
 /* 5기 추가 — 읽기 일정표 */
 .sched{width:100%;border-collapse:collapse;font-family:'Noto Sans KR',sans-serif;font-size:14px;margin:16px 0;}
-.sched th{background:var(--green);color:#fff;font-weight:700;padding:11px 10px;white-space:nowrap;width:auto;}
-.sched td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.sched th:nth-child(1){width:56px;}
+.sched th:nth-child(2){width:124px;}
+.sched th{background:var(--green);color:#fff;font-weight:700;padding:11px 8px;white-space:nowrap;width:auto;}
+.sched td{padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
 .sched tr:nth-child(even) td{background:#faf7f0;}
-.sched .wk{white-space:nowrap;font-weight:700;color:var(--green);width:96px;}
-.sched .dt{white-space:nowrap;color:var(--ink-soft);width:150px;}
+.sched .wk{white-space:nowrap;font-weight:700;color:var(--green);width:56px;}
+.sched .dt{white-space:nowrap;color:var(--ink-soft);width:124px;font-size:13.5px;}
+.sched .ch{width:auto;line-height:1.7;}
 .sched .ch b{color:var(--sun);font-weight:700;margin-right:4px;}
 .sched .rest td{background:var(--sun-wash)!important;color:var(--terra);font-family:'Noto Sans KR',sans-serif;font-size:13.5px;text-align:center;}
 .note{font-family:'Noto Sans KR',sans-serif;font-size:13.5px;color:var(--muted);line-height:1.75;margin:8px 0 0;}
@@ -135,7 +138,7 @@ table.pay tr.top td{background:#fbf3e2;}
 .payback .fine{font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--ink-soft);line-height:1.8;margin:16px 0 0;padding-top:14px;border-top:1px dashed #dcc79c;}
 .hero .payline{font-family:'Noto Sans KR',sans-serif;font-size:14px;color:#3a2a10;background:var(--sun2);display:inline-block;padding:8px 18px;border-radius:30px;font-weight:700;margin-top:18px;position:relative;z-index:1;}
 @media print{ .sched th{background:#2f4a3c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
-@media(max-width:700px){ .sched .dt{width:auto;} .sched{font-size:13px;} table.pay{font-size:13px;} .payback .amt{font-size:18px;} table.pay .real{text-align:left;} }
+@media(max-width:700px){ .sched .wk{width:auto;} .sched .dt{width:auto;white-space:normal;font-size:13px;} .sched th:nth-child(1),.sched th:nth-child(2){width:auto;} .sched{font-size:13px;} table.pay{font-size:13px;} .payback .amt{font-size:18px;} table.pay .real{text-align:left;} }
 </style></head><body><div class="sheet">
 
 <div class="hero">
