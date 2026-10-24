@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사피엔스 · 5주차 — 완독</title>
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="우티스의 북클럽">
+<meta property="og:title" content="사피엔스 · 5주차 — 18~20장">
+<meta property="og:description" content="벽돌책 완독 챌린지 5기 · 끝없는 혁명 · 그리고 그들은 행복하게 살았다 · 호모 사피엔스의 종말 · 완독">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://outis-books.github.io/bookclub/sapiens-w5.html">
+<meta property="og:image" content="https://outis-books.github.io/bookclub/og-sapiens.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://outis-books.github.io/bookclub/og-sapiens.jpg">
+<meta name="description" content="벽돌책 완독 챌린지 5기 『사피엔스』 5주차 — 18~20장 이번 주의 물음과 질문 셋 · 완독">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #fff; color: #111; font-size: 16px; line-height: 1.9; -webkit-font-smoothing: antialiased; }
+.page { max-width: 720px; margin: 0 auto; padding: 72px 24px 100px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #aaa; margin-bottom: 48px; flex-wrap: wrap; }
+.breadcrumb a { color: #aaa; text-decoration: none; }
+.breadcrumb .sep { opacity: 0.4; }
+.article-header { margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid #f0f0f0; }
+.meta { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.badge { font-family: 'DM Mono', monospace; font-size: 11px; padding: 3px 12px; border-radius: 100px; letter-spacing: 0.06em; }
+.badge-guide { background: #e1ebf8; color: #1b4a86; }
+.dot { color: #ddd; font-size: 12px; }
+.meta-text { font-size: 12px; color: #999; font-family: 'DM Mono', monospace; }
+h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; line-height: 1.35; letter-spacing: -0.02em; margin-bottom: 14px; }
+.subtitle { font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 300; color: #777; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 12px; padding: 3px 12px; border-radius: 100px; background: #f5f5f5; color: #888; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
+.step { display: flex; gap: 24px; margin-bottom: 52px; align-items: flex-start; }
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: #1b4a86; color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px; flex-shrink: 0; margin-top: 6px; }
+.step-body { flex: 1; min-width: 0; }
+.step-title { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 400; margin-bottom: 16px; line-height: 1.4; letter-spacing: -0.01em; }
+.step-body p { color: #444; margin-bottom: 14px; font-size: 15px; line-height: 1.95; }
+.callout { background: #f9f9f9; border-left: 2.5px solid #111; padding: 18px 22px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.callout-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 8px; }
+.callout p { font-size: 14px; color: #333; line-height: 1.8; margin: 0; }
+.concept { display: flex; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden; margin: 24px 0; }
+.concept-term { background: #111; color: #fff; padding: 20px 22px; display: flex; align-items: center; justify-content: center; min-width: 120px; }
+.concept-term span { font-family: 'Noto Serif KR', serif; font-size: 16px; writing-mode: vertical-rl; letter-spacing: 0.1em; }
+.concept-def { padding: 20px 22px; flex: 1; }
+.concept-def .term-en { font-family: 'DM Mono', monospace; font-size: 11px; color: #aaa; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+.concept-def p { font-size: 14px; color: #444; line-height: 1.8; margin: 0; }
+.steps-3 { display: flex; flex-direction: column; gap: 10px; margin: 20px 0 4px; }
+.mini { display: flex; gap: 14px; align-items: flex-start; background: #fafafa; border: 1px solid #f0f0f0; border-radius: 12px; padding: 16px 20px; }
+.mini-n { font-family: 'DM Mono', monospace; font-size: 11px; color: #1b4a86; flex-shrink: 0; margin-top: 4px; letter-spacing: 0.08em; }
+.mini p { font-size: 14px; color: #444; line-height: 1.8; margin: 0 !important; }
+.week { border: 1px solid #eee; border-radius: 14px; margin: 12px 0; overflow: hidden; background: #fff; }
+.week[open] { border-color: #ddd; }
+.week > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 18px 22px; background: #fafafa; transition: background 0.15s; }
+.week > summary::-webkit-details-marker { display: none; }
+.week > summary:hover { background: #f4f4f4; }
+.week[open] > summary { background: #1b4a86; }
+.week-no { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #1b4a86; flex-shrink: 0; }
+.week[open] .week-no { color: #9dbde6; }
+.week-theme { font-family: 'Noto Serif KR', serif; font-size: 16px; color: #222; flex: 1; line-height: 1.5; }
+.week[open] .week-theme { color: #f0ece4; }
+.week-days { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; flex-shrink: 0; }
+.week[open] .week-days { color: #c9dcf3; }
+.day { padding: 26px 22px; border-top: 1px solid #f2f2f2; }
+.day:first-of-type { border-top: none; }
+.day-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.day-no { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; color: #fff; background: #1b4a86; padding: 2px 9px; border-radius: 100px; flex-shrink: 0; }
+.day h4 { font-family: 'Noto Serif KR', serif; font-size: 16.5px; font-weight: 400; line-height: 1.5; color: #111; }
+.thesis { font-family: 'Noto Serif KR', serif; font-size: 15.5px; color: #1b4a86; line-height: 1.8; margin-bottom: 12px; padding-left: 14px; border-left: 2px solid #9dbde6; }
+.how { font-size: 14.5px; color: #555; line-height: 1.9; margin-bottom: 16px; }
+.mark { background: #eef4fb; border: 1px solid #c9dcf3; border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; }
+.mark-label { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; color: #1b4a86; display: block; margin-bottom: 5px; }
+.mark p { font-size: 13.5px; color: #33435a; line-height: 1.8; margin: 0; }
+.q-card { background: #fafafa; border: 1px solid #f0f0f0; border-radius: 12px; padding: 16px 20px; margin: 9px 0; }
+.q-num { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #1b4a86; margin-bottom: 6px; }
+.q-card p { font-size: 14.5px; color: #333; line-height: 1.85; margin: 0; }
+.cta-box { background: #1b4a86; border-radius: 16px; padding: 40px; text-align: center; margin-top: 64px; }
+.cta-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: #c9dcf3; margin-bottom: 16px; }
+.cta-text { font-family: 'Noto Serif KR', serif; color: #f0ece4; font-size: 20px; font-weight: 300; line-height: 1.7; margin-bottom: 28px; }
+.cta-sub { font-size: 13px; color: #c9dcf3; line-height: 1.7; }
+.footnote { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.06em; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f5f5f5; }
+p { color: #444; margin-bottom: 16px; }
+@media (max-width: 600px) { h1 { font-size: 26px; } .concept { flex-direction: column; } .concept-term { writing-mode: horizontal-tb; min-width: auto; } .concept-term span { writing-mode: horizontal-tb; } .page { padding: 48px 18px 80px; } .step { gap: 14px; } .day { padding: 22px 16px; } .week > summary { padding: 16px; } }
+@media print { .page { padding: 24px; } .week { break-inside: avoid; } }
+</style>
+<style>
+.wk-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 40px; font-family: 'DM Mono', monospace; font-size: 12px; flex-wrap: wrap; }
+.wk-nav a { color: #1b4a86; text-decoration: none; padding: 7px 14px; border: 1px solid #c9dcf3; border-radius: 100px; background: #eef4fb; }
+.wk-nav a:hover { background: #e1ebf8; }
+.wk-nav .none { opacity: 0; pointer-events: none; }
+.wk-hero { background: #1b4a86; border-radius: 16px; padding: 30px 32px; margin-bottom: 40px; }
+.wk-hero .lbl { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.15em; color: #c9dcf3; margin-bottom: 10px; }
+.wk-hero h2 { font-family: 'Noto Serif KR', serif; font-size: 24px; font-weight: 400; color: #fff; line-height: 1.45; }
+.wk-hero p { font-size: 13.5px; color: #d6e4f6; margin: 12px 0 0; line-height: 1.75; }
+.day { border-top: none; padding: 0 0 8px; }
+.day + .day { margin-top: 34px; padding-top: 34px; border-top: 1px solid #f2f2f2; }
+@media (max-width: 600px) { .wk-hero { padding: 24px 20px; } .wk-hero h2 { font-size: 20px; } }
+</style>
+<style>
+.big-q{font-family:'Noto Serif KR',serif;font-size:19px!important;color:#a23b12!important;line-height:1.6!important;}
+.mark p{color:#a23b12;}
+.dl{margin:0 0 44px;}
+.dl a{display:inline-block;background:#1b4a86;color:#fff;text-decoration:none;font-size:14px;padding:10px 20px;border-radius:100px;}
+.cta-text{font-size:17px!important;}
+
+.sec{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.16em;color:#1b4a86;margin:56px 0 18px;display:flex;align-items:center;gap:12px;}
+.sec::after{content:'';flex:1;height:1px;background:#c9dcf3;}
+.day{border:1px solid #e3e9f2!important;border-radius:16px;padding:0 0 22px!important;margin:0 0 28px!important;overflow:hidden;}
+.day + .day{border-top:1px solid #e3e9f2!important;padding-top:0!important;margin-top:0!important;}
+.day-head{padding:18px 22px;margin:0 0 18px!important;}
+.day > p, .day > .mark, .day > .q-card{margin-left:22px!important;margin-right:22px!important;}
+.day.c1 .day-head{background:#dbe8f8;} .day.c1 .day-no{background:#1b4a86;}
+.day.c2 .day-head{background:#dcefe9;} .day.c2 .day-no{background:#1f6b57;} .day.c2 .thesis{color:#1f6b57;border-left-color:#8fcbb7;}
+.day.c3 .day-head{background:#ebe3f6;} .day.c3 .day-no{background:#5b3a8c;} .day.c3 .thesis{color:#5b3a8c;border-left-color:#bca6dd;}
+.day.c1 .thesis{color:#1b4a86;}
+.day.c4 .day-head{background:#f6e8d2;} .day.c4 .day-no{background:#8a5a16;} .day.c4 .thesis{color:#8a5a16;border-left-color:#dcc08e;}
+.day.c5 .day-head{background:#f6dfe0;} .day.c5 .day-no{background:#8c2f3a;} .day.c5 .thesis{color:#8c2f3a;border-left-color:#dba6ac;}
+.q-card{border-left:5px solid #ccc!important;border-radius:0 12px 12px 0!important;}
+.q-card.qb{background:#fbf1ec;border-color:#f3dccf;border-left-color:#a23b12!important;} .q-card.qb .q-num{color:#a23b12;}
+.q-card.qd{background:#fdf6e3;border-color:#f3e6bf;border-left-color:#b07a0c!important;} .q-card.qd .q-num{color:#8a5f06;}
+.q-card.qn{background:#eaf2fb;border-color:#d3e3f5;border-left-color:#1b4a86!important;} .q-card.qn .q-num{color:#1b4a86;}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 22px;font-size:13px;}
+.legend span{padding:4px 12px;border-radius:100px;}
+.legend .b{background:#fbf1ec;color:#a23b12;} .legend .d{background:#fdf6e3;color:#8a5f06;} .legend .n{background:#eaf2fb;color:#1b4a86;}
+.masthead{display:flex;gap:22px;align-items:center;background:linear-gradient(135deg,#eef4fb,#d6e4f6);border-radius:18px;padding:24px;margin:0 0 30px;}
+.masthead img{width:92px;border-radius:5px;box-shadow:0 8px 20px rgba(11,27,51,.25);transform:rotate(-3deg);flex-shrink:0;}
+.masthead .k{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;color:#1b4a86;}
+.masthead .t{font-family:'Noto Serif KR',serif;font-size:28px;line-height:1.25;color:#0b1b33;margin:6px 0 4px;letter-spacing:-.02em;}
+.masthead .b{font-size:12.5px;color:#33435a;line-height:1.6;}
+.prog{display:flex;gap:3px;margin-top:12px;}
+.prog i{flex:1;height:6px;border-radius:3px;background:#c9dcf3;}
+.prog i.on{background:#1b4a86;}
+.prog-l{font-size:11.5px;color:#5f7391;margin-top:6px;font-family:'DM Mono',monospace;}
+@media (max-width:600px){.masthead{padding:20px 18px;gap:16px}.masthead img{width:76px}.masthead .t{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="breadcrumb">
+    <a href="sapiens.html">BOOK SALON</a><span class="sep">/</span><span>SAPIENS</span><span class="sep">/</span><span>WEEK 5 OF 5</span>
+  </div>
+
+  <div class="masthead">
+    <img src="sapiens-cover.jpg" alt="사피엔스 표지">
+    <div style="flex:1;min-width:0">
+      <div class="k">벽돌책 완독 챌린지 · 5기</div>
+      <div class="t">『사피엔스』</div>
+      <div class="b">유발 하라리 · 김영사 · 조현욱 옮김<br>2026. 9. 21 ~ 10. 21 · 하루 한 챕터</div>
+      <div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      <div class="prog-l">20 / 20 챕터 · 완독</div>
+    </div>
+  </div>
+
+  <div class="wk-nav"><a href="sapiens-w4.html">← 4주차</a><a href="sapiens.html">5기 안내</a><span class="none">다음 →</span></div>
+
+  <div class="wk-hero">
+    <div class="lbl">5주차 · 10/19(월)~10/21(수) · 18~20장</div>
+    <h2>끝없는 혁명, 그리고 사피엔스의 끝</h2>
+    <p>제4부 「과학혁명」을 닫으며 스무 장을 다 읽는 마지막 주입니다. 장마다 한 줄 풀이와 밑줄을 놓았습니다. 다 채우지 않으셔도 괜찮습니다.</p>
+  </div>
+
+  <div class="sec">01 · 이번 주를 꿰는 물음</div>
+  <div class="callout">
+    <p class="big-q">더 많이 갖게 된 사피엔스는 더 행복해졌을까요, 그리고 이제 무엇을 원하고 싶을까요?</p>
+  </div>
+
+  <div class="sec">02 · 장마다 한 줄과 밑줄</div>
+        <div class="day c1">
+          <div class="day-head"><span class="day-no">DAY 18 · 10/19</span><h4>18장 「끝없는 혁명」</h4></div>
+          <p class="thesis">국가와 시장이 가족과 공동체의 자리를 차지하며, 사람들은 개인이 되었습니다.</p>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 519쪽</span><p>“국가와 시장은 거절할 수 없는 제안을 가지고 사람들에게 접근했다. ‘개인이 되어라.’”</p></div>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 521쪽</span><p>“하지만 개인의 해방에는 대가가 따른다.”</p></div>
+        </div>
+        <div class="day c3">
+          <div class="day-head"><span class="day-no">DAY 19 · 10/20</span><h4>19장 「그리고 그들은 행복하게 살았다」</h4></div>
+          <p class="thesis">물질은 넉넉해졌지만, 그만큼 더 행복해졌는지는 알 수 없습니다.</p>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 551쪽</span><p>“오늘날의 평균적 사람이 1800년보다 더 행복하지 않다는 것도 무리가 아니다.”</p></div>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 565쪽</span><p>“행복은 정말로 자기기만에 달려 있는 것일까?”</p></div>
+        </div>
+        <div class="day c5">
+          <div class="day-head"><span class="day-no">DAY 20 · 10/21</span><h4>20장 「호모 사피엔스의 종말」</h4></div>
+          <p class="thesis">사피엔스는 이제 자기 몸과 욕망까지 다시 설계하는 문 앞에 서 있습니다.</p>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 583쪽</span><p>“우리가 우리의 유전자를 주물럭거린다고 해서 반드시 멸종하는 것은 아니다. 하지만 우리가 더 이상 호모 사피엔스가 아니게 될 가능성은 있다.”</p></div>
+          <div class="mark"><span class="mark-label">진행자의 밑줄 · 598쪽</span><p>“우리는 머지않아 스스로의 욕망 자체도 설계할 수 있을 것이다.”</p></div>
+        </div>
+
+  <div class="sec">03 · 우티스의 질문 셋</div>
+          <div class="q-card qb"><div class="q-num">Q1 · 개인 · 18장</div><p>예전엔 가족이나 이웃이 해 주던 일 가운데, 지금은 돈을 내고 사는 것은 무엇인가요?</p></div>
+          <div class="q-card qd"><div class="q-num">Q2 · 행복 · 19장</div><p>나를 행복하게 하는 이야기는 나만의 것인가요, 남들과 함께 믿는 것인가요?</p></div>
+          <div class="q-card qn"><div class="q-num">Q3 · 욕망 · 20장</div><p>내 마음을 마음대로 고칠 수 있다면, 나는 무엇을 원하고 싶은가요?</p></div>
+
+  <div class="sec">04 · 이번 주 권유</div>
+  <div class="cta-box" style="margin-top:0">
+    <div class="cta-label">Last Week</div>
+    <p class="cta-text">세 물음 가운데 하나를 골라,<br>스무 장을 다 읽은 지금의 생각을 한 단락 적어 보시겠어요?</p>
+    <p class="cta-sub">벽돌책 완독 챌린지 5기 『사피엔스』 · 20 / 20 완독</p>
+  </div>
+
+  <div class="wk-nav"><a href="sapiens-w4.html">← 4주차</a><a href="sapiens.html">5기 안내</a><span class="none">다음 →</span></div>
+
+  <div class="footnote">
+    <p>BOOK — 유발 하라리 『사피엔스』 · 김영사 · 조현욱 옮김 · 전 20장</p>
+    <p style="margin-top:6px;">WEEK — 5 / 5 · 하루 한 챕터 · 벽돌책 완독 챌린지 5기</p>
+    <p style="margin-top:6px;">NOTE — 밑줄 위 한 줄 풀이는 진행자의 읽기입니다 · 밑줄은 진행자가 그은 자리이고, 여러분의 밑줄은 다를 수 있습니다</p>
+  </div>
+
+</div>
+</body>
+</html>
