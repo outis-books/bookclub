@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -11,14 +11,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Noto Sans KR', sans-serif; background: #FFF3F0; color: #3A2E2A; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #F6F2FC; color: #33293F; -webkit-font-smoothing: antialiased; }
 .page { max-width: 960px; margin: 0 auto; padding: 36px 16px 64px; }
-.kicker { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #D9594C; margin-bottom: 8px; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #7E5BB5; margin-bottom: 8px; }
 h1 { font-size: 26px; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
-.lede { font-size: 14px; color: #6B5A54; margin-bottom: 20px; }
+.lede { font-size: 14px; color: #5E5470; margin-bottom: 20px; }
 .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
-.btn { display: inline-block; text-decoration: none; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 100px; background: #D9594C; color: #fff; }
-.btn.sub { background: #fff; color: #D9594C; border: 1.5px solid #F4A79D; }
+.btn { display: inline-block; text-decoration: none; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 100px; background: #7E5BB5; color: #fff; }
+.btn.sub { background: #fff; color: #7E5BB5; border: 1.5px solid #C9B6E8; }
 figure { margin: 0 0 18px; }
 figure img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(58,46,42,.10); background: #fff; }
 figcaption { font-size: 12px; color: #9a8a84; text-align: right; margin-top: 6px; }
@@ -42,7 +42,7 @@ const N = 15, box = document.getElementById('slides');
 for (let i = 1; i <= N; i++) {
   const n = String(i).padStart(2, '0');
   box.insertAdjacentHTML('beforeend',
-    `<figure><img src="question-reading/s${n}.jpg?v=3" alt="슬라이드 ${i}" loading="${i > 2 ? 'lazy' : 'eager'}"><figcaption>${i} / ${N}</figcaption></figure>`);
+    `<figure><img src="question-reading/s${n}.jpg?v=4" alt="슬라이드 ${i}" loading="${i > 2 ? 'lazy' : 'eager'}"><figcaption>${i} / ${N}</figcaption></figure>`);
 }
 </script>
 </body>
