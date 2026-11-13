@@ -52,6 +52,19 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 .other h3 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 400; margin-bottom: 3px; }
 .other h3 a { color: #4A4A44; text-decoration: none; border-bottom: 2px solid rgba(0,0,0,.12); }
 .footnote { font-family: 'DM Mono', monospace; font-size: 11px; color: #bbb; letter-spacing: 0.06em; margin-top: 56px; padding-top: 24px; border-top: 1px solid #f5f5f5; line-height: 2; }
+.about { background: #F7F4EE; border: 1px solid rgba(0,0,0,.06); border-left: 7px solid #8A5A16; border-radius: 14px; padding: 26px 26px 24px; }
+.about-lead { font-family: 'Noto Serif KR', serif; font-size: 16.5px; color: #333; line-height: 1.95; margin-bottom: 18px; }
+.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 6px; }
+.about-h { font-size: 13px; font-weight: 500; color: #8A5A16; letter-spacing: .02em; margin: 14px 0 6px; }
+.about ul { padding-left: 18px; font-size: 14.5px; color: #4a4a4a; line-height: 1.85; }
+.host { font-size: 14.5px; color: #4a4a4a; line-height: 1.85; }
+.host b { font-weight: 500; color: #222; }
+.join { margin-top: 22px; padding-top: 20px; border-top: 1px dashed rgba(138,90,22,.3); text-align: center; }
+.join-t { font-size: 15px; color: #333; margin-bottom: 12px; }
+.join-btn { display: inline-block; background: #FEE500; color: #191919; font-weight: 500; font-size: 16px; text-decoration: none; border-radius: 12px; padding: 13px 26px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.join-btn:hover { filter: brightness(.96); }
+.join-url { font-family: 'DM Mono', monospace; font-size: 11.5px; color: #999; margin-top: 10px; word-break: break-all; }
+@media (max-width: 680px) { .about-cols { grid-template-columns: 1fr; gap: 0; } .about { padding: 22px 18px; } }
 @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 27px; } .wrap { padding: 44px 18px 70px; } }
 </style>
 </head>
@@ -67,6 +80,37 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 하루에 한 챕터씩 읽고, 그날의 질문 몇 개에 몇 줄 적고, 한 주에 한 번 모여 나눕니다.
 1기부터 지금까지의 자료를 여기에 모아 둡니다. 모임에 없으셨던 분도 그대로 펴서 쓰실 수 있습니다.
 </p>
+
+<p class="section-label">우티스의 북클럽 소개</p>
+<div class="about">
+<p class="about-lead">우티스의 북클럽은 2022년부터 직장인들이 모여 책을 읽어 온 독서모임입니다. 지금까지 46권을 함께 읽었습니다.
+이제 직장인 모임이라는 울타리를 걷고, 책을 읽고 글을 쓰고 싶은 분이라면 누구나 오실 수 있는 자리로 새로 엽니다.</p>
+<div class="about-cols">
+<div>
+<p class="about-h">이렇게 함께합니다</p>
+<ul>
+<li>한 권을 함께 읽고 이야기를 나눕니다.</li>
+<li>책을 읽고 나서 짧은 글을 써 봅니다.</li>
+<li>두꺼운 책은 「벽돌책 완독 챌린지」로 하루 한 챕터씩 끝까지 읽습니다.</li>
+</ul>
+</div>
+<div>
+<p class="about-h">이런 분을 모십니다</p>
+<ul>
+<li>책 읽기와 글쓰기를 꾸준히 이어 가고 싶은 40·50대 여성</li>
+<li>혼자서는 자꾸 미뤄져 함께 읽을 동무가 필요한 분</li>
+</ul>
+</div>
+</div>
+<p class="about-h">모임을 꾸리는 사람</p>
+<p class="host"><b>이서윤</b> · 한국강사신문에 칼럼 「이서윤의 문장연구소」를 연재하고 있습니다.<br>
+저서 『아무튼 지치지 않도록』 · 공저 『그림책을 활용한 감정코칭』 『생각을 여는 창』 『삶이 레몬을 준다면 레모네이드를 만들어라』</p>
+<div class="join">
+<p class="join-t">함께하실 마음이 있으시면 오픈채팅방으로 들어와 주십시오.</p>
+<a class="join-btn" href="https://open.kakao.com/o/gX5SZXEi" target="_blank" rel="noopener">우티스의 오픈채팅방 들어가기</a>
+<p class="join-url">open.kakao.com/o/gX5SZXEi</p>
+</div>
+</div>
 
 <p class="section-label">벽돌책 완독 챌린지</p>
 <div class="grid">
