@@ -35,6 +35,10 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 .c6 { --accent: #7A5C1E; --tint: #F3EAD3; }
 .c6::after { content: "06"; }
 .c1::after { content: "01"; } .c2::after { content: "02"; } .c3::after { content: "03"; } .c4::after { content: "04"; } .c5::after { content: "05"; }
+.cover { position: absolute; top: 22px; right: 20px; width: 84px; height: auto; border-radius: 3px; box-shadow: 0 3px 10px rgba(0,0,0,.18); z-index: 1; }
+.card .card-top, .card h2, .card .by, .card .note { margin-right: 104px; }
+.card { min-height: 190px; }
+.card::after { display: none; }
 .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
 .no { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; font-weight: 500; color: #fff; background: var(--accent); border-radius: 100px; padding: 3px 11px; }
 .state { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.06em; border-radius: 100px; padding: 2px 10px; }
@@ -117,15 +121,18 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 <p class="section-label">벽돌책 완독 챌린지</p>
 <div class="grid">
 <div class="card c6">
+<img class="cover" src="covers/c6.jpg" alt="">
 <div class="card-top"><span class="no">6기</span><span class="state state-now">진행 중</span></div>
 <h2><a href="https://outis-books.github.io/silent-spring/">침묵의 봄</a></h2>
 <p class="by">레이첼 카슨 · 전 17장</p>
 <p class="note">1962년, 살충제가 흙과 물과 새와 사람의 몸에 무엇을 남기는지 한 장씩 따라갑니다. 하루 한 장, 월~금, 네 주. 2026. 11. 2 ~ 11. 24 · 참가비 없음.</p>
 <div class="weeks">
 <a href="https://outis-books.github.io/silent-spring/">모집 안내</a>
+<a href="silent-spring-w1-2.html">1·2주차</a>
 </div>
 </div>
 <div class="card c5">
+<img class="cover" src="covers/c5.png" alt="">
 <div class="card-top"><span class="no">5기</span><span class="state state-done">완독</span></div>
 <h2><a href="sapiens.html">사피엔스</a></h2>
 <p class="by">유발 하라리 · 김영사 · 598쪽 · 전 20장</p>
@@ -140,6 +147,7 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 </div>
 </div>
 <div class="card c4 now">
+<img class="cover" src="covers/c4.png" alt="">
 <div class="card-top"><span class="no">4기</span><span class="state state-done">완독</span></div>
 <h2><a href="intimate-history.html">인간의 내밀한 역사</a></h2>
 <p class="by">시어도어 젤딘 · 어크로스 · 전 25장</p>
@@ -156,18 +164,21 @@ h1 { font-family: 'Noto Serif KR', serif; font-size: 34px; font-weight: 400; lin
 </div>
 </div>
 <div class="card c3">
+<img class="cover" src="covers/c3.png" alt="">
 <div class="card-top"><span class="no">3기</span><span class="state state-done">완독</span></div>
 <h2><a href="poetry-and-truth.html">시와 진실</a></h2>
 <p class="by">괴테 · 동서문화사 · 4부 20장</p>
 <p class="note">예순의 괴테가 스물여섯의 자신을 다시 쓰다. 하루 한 챕터, 주 5일, 네 주.</p>
 </div>
 <div class="card c2">
+<img class="cover" src="covers/c2.png" alt="">
 <div class="card-top"><span class="no">2기</span><span class="state state-done">완독</span></div>
 <h2><a href="iliad.html">일리아스</a></h2>
 <p class="by">호메로스 · 전 24권을 20회로 · 2026. 4. 20 ~ 5. 21</p>
 <p class="note">분노에서 시작해 연민으로 닫히는, 서양 문학의 첫 책.</p>
 </div>
 <div class="card c1">
+<img class="cover" src="covers/c1.png" alt="">
 <div class="card-top"><span class="no">1기</span><span class="state state-done">완독</span></div>
 <h2><a href="don-quixote.html">돈키호테</a></h2>
 <p class="by">세르반테스 · 열린책들 · 전 2권 126장 · 2026. 1. 5 ~ 3. 19</p>
